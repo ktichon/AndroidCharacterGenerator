@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "325361220468",
+    "project_id": "character-generator-f3f83",
+    "storage_bucket": "character-generator-f3f83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325361220468:android:01c2bf4fe4fec87a304a21",
+        "android_client_info": {
+          "package_name": "com.example.projectmobilecharactergenerator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325361220468-o2cl0m355qucu5mpiu5e31d2u5usmlgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACO1PKH2uJp_etqqG1PRLoAdE2Xnhr68Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325361220468-o2cl0m355qucu5mpiu5e31d2u5usmlgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

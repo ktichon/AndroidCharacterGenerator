@@ -1,0 +1,36 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        app:key="enable_dnd"
+        android:title="Allow Character Traits"
+        android:switchTextOn="Enable"
+        android:summaryOn="The app will add the default dnd traits of personality, ideal, bond, and flaw to any new characters. "
+        android:switchTextOff="Disable"
+        android:defaultValue="false"/>
+    <PreferenceCategory
+        android:title="Character Traits"
+        android:dependency="enable_dnd">
+
+        <MultiSelectListPreference
+            android:title="Available Traits"
+            android:summary="@string/traitSummary"
+            app:key="dnd_traits"
+            android:entries="@array/dnd_traits"
+            android:entryValues="@array/dnd_traits"
+            android:defaultValue="@array/dnd_traits"
+            />
+
+        <MultiSelectListPreference
+            android:title="Available Backgrounds"
+            android:summary="List of backgrounds that the traits will be generated from"
+            app:key="dnd_backgrounds"
+            android:entries="@array/background_array"
+            android:entryValues="@array/background_array"
+            android:defaultValue="@array/background_array"
+            />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Project Mobile Character Generator</string>
+    <string name="CDB">Character-Database</string>
+    <string name="IDB">Info-Database</string>
+    <string name="art_dir">storedArt</string>
+    <string name="c_id">Character-Id</string>
+    <string name="c_name">Character-name</string>
+    <string name="update">Character-update</string>
+    <string name="search">View-search</string>
+
+    <string name="the_summary">Adds a "the" to the front of each epithet. It generally makes the name flow better, but it can cause grammar issues in some scenarios.</string>
+    <string name="the_title">Add "The"</string>
+    <string name="traitSummary">This decides which traits will be on the app</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

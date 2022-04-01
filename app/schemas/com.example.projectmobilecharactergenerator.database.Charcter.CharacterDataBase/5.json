@@ -1,0 +1,256 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "df2fc892e438fd1ac9d22de60bd20bfb",
+    "entities": [
+      {
+        "tableName": "CharacterInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `hasVillain` INTEGER NOT NULL, `hasDnDCharacter` INTEGER NOT NULL, `name` TEXT, `epithet` TEXT, `art_path` TEXT, `description` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hasVillain",
+            "columnName": "hasVillain",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hasDnDCharacter",
+            "columnName": "hasDnDCharacter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "epithet",
+            "columnName": "epithet",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "art_path",
+            "columnName": "art_path",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Villain",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `character_id` INTEGER, `scheme` TEXT, `method` TEXT, `weakness` TEXT, FOREIGN KEY(`character_id`) REFERENCES `CharacterInfo`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "character_id",
+            "columnName": "character_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scheme",
+            "columnName": "scheme",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "method",
+            "columnName": "method",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weakness",
+            "columnName": "weakness",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "CharacterInfo",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "character_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "DnDCharacter",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `character_id` INTEGER, `personality` TEXT, `ideal` TEXT, `bond` TEXT, `flaw` TEXT, `past` TEXT, FOREIGN KEY(`character_id`) REFERENCES `CharacterInfo`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "character_id",
+            "columnName": "character_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "personality",
+            "columnName": "personality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ideal",
+            "columnName": "ideal",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bond",
+            "columnName": "bond",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flaw",
+            "columnName": "flaw",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "past",
+            "columnName": "past",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "CharacterInfo",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "character_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "AdditionalTrait",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `character_id` INTEGER, `characterTrait` TEXT, `traitCategory` TEXT, `traitType` TEXT, `displayOrder` INTEGER NOT NULL, FOREIGN KEY(`character_id`) REFERENCES `CharacterInfo`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "character_id",
+            "columnName": "character_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "characterTrait",
+            "columnName": "characterTrait",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "traitCategory",
+            "columnName": "traitCategory",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "traitType",
+            "columnName": "traitType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "displayOrder",
+            "columnName": "displayOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "CharacterInfo",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "character_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'df2fc892e438fd1ac9d22de60bd20bfb')"
+    ]
+  }
+}

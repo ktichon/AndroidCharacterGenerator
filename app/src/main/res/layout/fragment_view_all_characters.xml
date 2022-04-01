@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewAllCharactersFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:text="All Characters"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:id="@+id/tvViewAllTitle"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:padding="5sp"
+        android:hint="Search Character By Name"
+        android:textAlignment="center"
+        android:id="@+id/etSearch"
+        android:visibility="gone"
+        android:background="@drawable/card_border"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10px"
+        android:id="@+id/tvNoCharacters"
+        android:gravity="center"
+        android:text="There are no stored characters at the moment. Click the '+' icon in the toolbar to create the first character."
+        android:visibility="gone"
+        android:textAlignment="center" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10px"
+                android:paddingBottom="50sp"/>
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateCharacterFragment"
+    android:orientation="vertical"
+    android:padding="20sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/tvNewCharacterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a new Character"
+                android:textAlignment="center"
+                android:layout_margin="5sp"
+                android:textSize="24sp" />
+            <ImageButton
+                android:id="@+id/ibRollCharacter"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_marginBottom="5sp"
+                android:adjustViewBounds="true"
+                android:padding="5sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/refresh_icon" />
+
+
+        </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llTraitContainer">
+
+            <LinearLayout
+                android:id="@+id/llNameTraits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/custom_border"
+                android:orientation="vertical"
+                android:paddingVertical="10sp">
+
+                <TextView
+                    android:id="@+id/tvNameTraits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:text="Name Traits"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter a name"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvEpithet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Epithet"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etEpithet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter an epithet"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llVillains"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/custom_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvVillainTraits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:text="Villain Traits"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/llVillainScheme"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvScheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scheme"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etScheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter a Scheme"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVillainMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Method"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter the method"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVillainWeakness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvWeakness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weakness"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+
+                        />
+
+
+                    <EditText
+                        android:id="@+id/etWeakness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter a weakness"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDnDTraits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/custom_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvDnDTraits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:text="Character Traits"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/llDnDPersonality"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPersonality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personality"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etPersonality1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter a Personality trait"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDnDIdeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvIdeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ideal"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etIdeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter an ideal"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDnDBond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bond"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+
+                        />
+
+
+                    <EditText
+                        android:id="@+id/etBond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter a bond"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDnDFlaw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvFlaw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Flaw"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+
+                        />
+
+
+                    <EditText
+                        android:id="@+id/etFlaw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter a bond"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/custom_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="300sp"
+                    android:layout_height="300sp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnUploadArt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Art From Photo Library" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/custom_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes" />
+
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    android:gravity="top"
+                    android:hint="ex 'They where a kind, gentle folk, until one day on the plains of Arkansas a bolt of lighting ...'"
+                    android:inputType="text|textMultiLine"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50sp"
+                android:text="Save" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

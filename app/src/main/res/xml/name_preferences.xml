@@ -1,0 +1,53 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        app:key="name_generator_used"
+        android:title="Name Generator"
+        android:switchTextOn="Custom"
+        android:summaryOn="The app will use my custom made name generator when creating a random name"
+        android:switchTextOff="Web"
+        android:summaryOff="The app will use a name generated from https://namey.muffinlabs.com/name.json"
+        android:autoLink="web"
+        android:defaultValue="true"/>
+    <PreferenceCategory
+        android:title="Custom Name Generator"
+        app:key="custom_generator"
+        >
+        <SeekBarPreference
+            app:key="max_syllable_length"
+            app:title="Max # of Syllables"
+            app:min="1"
+            android:defaultValue="2"
+            app:useSimpleSummaryProvider="true"
+            android:max="5"/>
+        <ListPreference
+            app:key="name_complexity"
+            android:title="Name Complexity"
+            android:entries="@array/name_complexity_array"
+            app:useSimpleSummaryProvider="true"
+            android:entryValues="@array/name_complexity_values_array"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:key="web_generator"
+        app:isPreferenceVisible="false">
+        <SwitchPreference
+            app:key="name_surname"
+            android:title="Include Surname"
+            android:defaultValue="false"
+            android:summaryOff="The name will not include a surname"
+            android:summaryOn="The name will include a surname"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:key="epithet_key"
+        android:title="Epithet Settings">
+        <SwitchPreference
+            app:key="epithet_the"
+            android:title="@string/the_title"
+            android:summary="@string/the_summary"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

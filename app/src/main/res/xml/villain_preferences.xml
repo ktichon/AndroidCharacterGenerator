@@ -1,0 +1,40 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        app:key="enable_villain"
+        android:title="Allow Villain Traits"
+        android:switchTextOn="Enable"
+        android:summaryOn="The app will add villain traits to newly create characters"
+        android:switchTextOff="Disable"
+        android:defaultValue="false"/>
+    <PreferenceCategory
+        android:title="Villain Traits"
+        android:dependency="enable_villain">
+        <SwitchPreference
+            android:defaultValue="true"
+            app:key="villain_scheme"
+            android:title="Allow Scheme"
+            android:summary="Gives the characters an evil scheme" />
+        <SwitchPreference
+            android:defaultValue="true"
+            app:key="villain_method"
+            android:title="Allow Method"
+            android:summary="Gives the characters the method that they use to accomplish their scheme"/>
+        <SwitchPreference
+            android:defaultValue="true"
+            app:key="villain_weakness"
+            android:title="Allow Weakness"
+            android:summary="Gives the characters a fatal weakness"/>
+
+
+    </PreferenceCategory>
+    <!--<MultiSelectListPreference
+        app:dependency="enable_villain"
+        android:title="Available Villain Traits"
+        app:key="villain_traits"
+        android:entries="@array/villain_traits_array"
+        android:entryValues="@array/villain_traits_array"
+        android:defaultValue="@array/villain_traits_array"
+        />-->
+</PreferenceScreen>

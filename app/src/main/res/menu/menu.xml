@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/SuperMenu">
+    <item
+        android:id="@+id/itNewCharacter"
+        android:title="Create New"
+        android:icon="@drawable/add_icon"
+        app:showAsAction="always|withText">
+    </item>
+    <item
+        android:id="@+id/itViewAll"
+        android:title="View All"/>
+    <item
+        android:id="@+id/itSearch"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:showAsAction="always|withText"
+        />
+    <item
+        android:id="@+id/itLogin"
+        android:title="Login"
+        android:icon="@drawable/login"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/itLoadEpithets"
+        android:title="Epithets"/>
+
+    <item
+        android:id="@+id/itDeleteAll"
+        android:title="Delete All Characters"
+        />
+    <item
+        android:id="@+id/itSettings"
+        android:title="Settings"
+        />
+</menu>

@@ -1,0 +1,49 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="name_complexity_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="name_complexity_values_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="villain_traits_array">
+        <item>Scheme</item>
+        <item>Method</item>
+        <item>Weakness</item>
+    </string-array>
+    <string-array name="background_array">
+        <item>All</item>
+        <item>Acolyte</item>
+        <item>Charlatan</item>
+        <item>Criminal</item>
+        <item>Entertainer</item>
+        <item>Folk Hero</item>
+        <item>Guild Artisan</item>
+        <item>Hermit</item>
+        <item>Noble</item>
+        <item>Outlander</item>
+        <item>Sage</item>
+        <item>Sailor</item>
+        <item>Soldier</item>
+        <item>Urchin</item>
+    </string-array>
+    <string-array name="dnd_traits">
+        <item>Personality</item>
+        <item>Ideal</item>
+        <item>Bond</item>
+        <item>Flaw</item>
+    </string-array>
+</resources>

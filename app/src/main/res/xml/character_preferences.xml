@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Preference
+        app:key="Name"
+        android:title="Name Generator Settings"
+        app:fragment="com.example.projectmobilecharactergenerator.settings.NameSettingsFragment"/>
+
+    <Preference
+        app:key="villain_settings"
+        android:title="Villain Settings"
+        app:fragment="com.example.projectmobilecharactergenerator.settings.VillainSettingsFragment"/>
+    <Preference
+        app:key="dnd_settings"
+        android:title="Character Traits Settings"
+        app:fragment="com.example.projectmobilecharactergenerator.settings.DnDSettingsFragment"/>
+</PreferenceScreen>
